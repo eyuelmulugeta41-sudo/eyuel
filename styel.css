@@ -1,0 +1,58 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 7px;
+}
+.profile-img {
+    width: 125px;
+    height: 125px;
+    object-fit: cover;
+    border-radius: 600px;
+    margin-bottom: 10px;
+
+}
+body {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+    padding-top: 70px;
+}
+.eyu2{
+    width: 420px;
+    height: 685px;
+    background-color: wheat;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(18, 17, 17, 0.15);
+    text-align: center;
+    padding: 25px;
+    
+
+}
+.skills {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 10px;
+
+}
+.skills div {
+    background-color: aliceblue;
+    padding: 7px;
+    border-radius: 7px;
+}
+button {
+    margin-top: 35px;
+    padding: 12px 25px;
+    background-color: rgb(26, 26, 229);
+    color: white;
+    border-radius: 6px;
+}
+button:hover {
+    opacity: 0.8;
+}
+button::after {
+    opacity: 0.5;
+}
