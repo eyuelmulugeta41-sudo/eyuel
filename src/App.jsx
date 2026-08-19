@@ -1,8 +1,13 @@
 import '../styel.css';
+import { useState } from 'react';
 
 const skills = ['HTML5', 'CSS3', 'Git'];
+const phoneNumber = '0925318232';
+const telegramUsername = 'DEMONTOPUP';
 
 function App() {
+  const [showContactOptions, setShowContactOptions] = useState(false);
+
   return (
     <main className="eyu2">
       <img src="/profile.jpg" alt="Eyuel M profile" className="profile-img" />
@@ -22,7 +27,25 @@ function App() {
         ))}
       </div>
 
-      <button type="button">Contact Me</button>
+      <button
+        type="button"
+        onClick={() => setShowContactOptions((isVisible) => !isVisible)}
+      >
+        Contact Me
+      </button>
+
+      {showContactOptions && (
+        <div className="contact-options">
+          <a href={`tel:${phoneNumber}`}>Call Me</a>
+          <a
+            href={`https://t.me/${telegramUsername}`}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Telegram
+          </a>
+        </div>
+      )}
     </main>
   );
 }
